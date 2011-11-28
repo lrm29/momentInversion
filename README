@@ -1,0 +1,9 @@
+Program:
+    adaptiveMomentInversion
+
+Author:
+    Laurence R. McGlashan
+
+Notes:
+    Requires OpenFOAM (www.openfoam.com) to run.
+    The folder data/ contains example moment inputs.
