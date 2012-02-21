@@ -167,7 +167,7 @@ void constructRecurrenceMatrix
                       - b[k-2]*sig[k-2][l];
         }
         a[k-1] = sig[k][k+1]/sig[k][k] - sig[k-1][k]/sig[k-1][k-1];
-        b[k-1] = Foam::sqrt(sig[k][k]/sig[k-1][k-1]);
+        b[k-1] = sig[k][k]/sig[k-1][k-1];
     }
 }
 
@@ -250,7 +250,7 @@ scalarList chebyshev
         for (label i = 0; i < n1 + 1; ++i)
         {
             diagonal[i] = a[i];
-            subDiag[i] = b[i];
+            subDiag[i] = Foam::sqrt(b[i]);
             z[i][i] = 1.0;
         }
 
